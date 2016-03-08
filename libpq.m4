@@ -19,7 +19,7 @@ m4_pattern_forbid([^_BT_])dnl
 dnl Internal: _BT_CHECK_LIBPQ([action-if-exists],[action-if-not-exists],[subdir],[preconfigured])
 AC_DEFUN([_BT_CHECK_LIBPQ],[
 	m4_ifval([$4],[libpq_configured=yes])	
-	BT_CHECK_LIB([libpq],[$3],[libpq],[
+	BT_CHECK_LIB([libpq],[$3],[],[
 		AC_CHECK_PROG([PG_CONFIG],[pg_config],[pg_config])
 		if ! test x"$PG_CONFIG" = x"" ; then
 			have_libpq=yes
