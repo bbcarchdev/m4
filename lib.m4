@@ -287,6 +287,7 @@ dnl
 dnl Add a fully-qualified path to PKG_CONFIG_PATH
 AC_DEFUN([BT_LIB_ADD_PKGCONFIG],[
 	AC_REQUIRE([_BT_LIB_OUTPUT])dnl
+	AC_MSG_RESULT([adding $1 to PKG_CONFIG_PATH])
 	if test x"$PKG_CONFIG_PATH" = x"" ; then
 		PKG_CONFIG_PATH="$1"
 	else
